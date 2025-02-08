@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MR Web Solutions</title>
+    <script>
+      // Verificar el tema al cargar la página
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+    <!-- Favicon básico -->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/dpcpcnqmq/image/upload/v1738764428/favicon-16x16_s8nk3c.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dpcpcnqmq/image/upload/v1738764428/favicon-32x32_yek67c.png">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dpcpcnqmq/image/upload/v1738764427/apple-touch-icon_qci0iy.png">
+    
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="https://res.cloudinary.com/dpcpcnqmq/image/upload/v1738764426/android-chrome-192x192_uia46y.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://res.cloudinary.com/dpcpcnqmq/image/upload/v1738764428/android-chrome-512x512_p2u7mt.png">
+    
+    <!-- Manifest para PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Color de la barra de estado en móviles -->
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/svg+xml" href="https://placehold.co/32x32/png?text=D" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
